@@ -1,48 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
    <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title>Módulo 15</title>
       <link rel="stylesheet" href="./css/bootstrap.min.css" />
       <link rel="stylesheet" href="./css/custom.css">
    </head>
    <body>
-      <header>
+
+      <header> <!---Bootstrap m-auto(center)-->
+         <nav class="navbar col-md-10 navbar-expand-lg bg-light m-auto">
+            <div class="container-fluid">
+              <img src="./images/logo.png" alt="Logo" class="img-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#sobre">Sobre</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#produtos">Produtos</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#contato">Contato</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+      </header>
+
+      <section id="sobre">
          <div class="container">
             <div class="row">
                <div class="col">
-                  <h1>Logo</h1>
+                  <h1>Sobre nós</h1>
+                  <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ut assumenda temporibus error vero dolores repudiandae sed nihil reiciendis sunt qui maiores veniam eos iste adipisci beatae quam, placeat voluptates.
+                  </p>
+                  <p>
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates architecto deserunt iusto possimus esse provident saepe fugiat! Laborum inventore iusto molestias vero, fugit deleniti, quasi vitae culpa consequuntur excepturi cupiditate.
+                  </p>
                </div>
                <div class="col">
-                  <ul class="nav justify-content-end">
-                     <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                     <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
-                     <li class="nav-item"><a href="#produtos" class="nav-link">Produtos</a></li>
-                     <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </header>
-      <section id="sobre">
-         <div class="container .container-fluid">
-            <div class="row">
-               <div class="col col-md-8 col-sm-12">
-                  <h2>Coluna 1</h2>
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi perspiciatis nobis ullam amet perferendis deserunt provident quos, blanditiis accusamus
-                     laudantium enim sint earum facilis, quibusdam fuga eligendi natus voluptate?
-                  </p>
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi perspiciatis nobis ullam amet perferendis deserunt provident quos, blanditiis accusamus
-                     laudantium enim sint earum facilis, quibusdam fuga eligendi natus voluptate?
-                  </p>
-                  <a class="btn btn-lg btn-success" href="">Botão</a>
-               </div>
-               <div class="col-md-4 col-sm-12">
-                  <img src="./images/tech.jpg" alt="Technology" class="img-fluid" />
+                  <img src="./images/cafe.jpg" alt="Café" class="img-fluid">
                </div>
             </div>
          </div>
@@ -53,10 +69,10 @@
             <div class="row">
                <div class="col">
 
-                  <h2>Produtos</h2>
+                  <h2 class="text-center">Produtos</h2>
 
                   <div class="card">
-                     <img src="./images/tech.jpg" alt="Technology" class="img-fluid" />
+                     <img src="./images/cafe.jpg" alt="Technology" class="img-fluid" />
                      <div class="card-body">
                         <h5 class="card-title">
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi fugit repudiandae eaque consequuntur sed id veniam? Iste officiis, odio amet quia, unde
@@ -113,6 +129,7 @@
                   <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação</p>
                </div>
                <div class="col-md-6 col-sm-12">
+
                   <form class="form">
                      <div class="input-group">
                         <input class="form-control" type="text" name="name" placeholder="Digite seu nome">
@@ -129,6 +146,7 @@
                         Solicitar Cotação
                      </button>
                   </form>
+
                </div>
             </div>
          </div>
@@ -172,15 +190,21 @@
                      </tbody>
                   </table>
                </div>
+
                <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                </div>
+
             </div>
          </div>
       </div>
 
 
-
+<!--TODO: Change pictures from products -->
+<!--TODO: End modals for products-->
+<!--TODO: Put form inside a modal-->
+<!--TODO: Choose P-T Colors-->
+<!--TODO: -->
 
 
 

@@ -1,3 +1,11 @@
+:root {
+   --primary: #412234;
+   --secondary: #6D466B;
+   --tertiary: #B49FCC;
+   --default: #FFFFFF;
+   --maybe: #EAD7D7;
+}
+
 .card {
    width: 32%;
    float: left;
@@ -11,4 +19,34 @@ section {
 input,
 textarea {
    margin-bottom: 1rem;
+}
+
+nav img {
+   width: 60px;
+   height: 60px;
+}
+
+nav {
+   border-radius: 10px;
+}
+
+header nav .container-fluid {
+   background-color: var(--tertiary);
+   border-radius: 10px;
+}
+
+.me-2 {
+   margin-top: 15px;
+}
+
+#sobre img {
+   width: 450px;
+}
+
+#produtos h2 {
+   color: var(--primary);
+}
+
+#produtos h5 {
+   color: var(--secondary);
 }
