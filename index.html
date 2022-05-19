@@ -9,7 +9,6 @@
       <link rel="stylesheet" href="./css/custom.css">
    </head>
    <body>
-
       <header> <!---Bootstrap m-auto(center)-->
          <nav class="navbar col-md-10 navbar-expand-lg bg-light m-auto">
             <div class="container-fluid">
@@ -26,14 +25,17 @@
                     <a class="nav-link active" href="#sobre">Sobre</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#produtos">Produtos</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#contato">Contato</a></li>
-                    </ul>
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#produtos">Produtos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#contato">Contato</a></li>
+                     </ul>
+                     <li class="nav-item">
+                       <button class="nav-link active btn border-0" data-bs-target="#modal-me" data-bs-toggle="modal">Sobre mim</button>
+                     </li>
                   </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -58,7 +60,7 @@
                   </p>
                </div>
                <div class="col">
-                  <img src="./images/cafe.jpg" alt="Café" class="img-fluid">
+                  <img src="./images/cafe.jpg" alt="Café" class="img-fluid bradius">
                </div>
             </div>
          </div>
@@ -68,11 +70,9 @@
          <div class="container">
             <div class="row">
                <div class="col">
-
                   <h2 class="text-center">Produtos</h2>
-
-                  <div class="card">
-                     <img src="./images/cafe.jpg" alt="Technology" class="img-fluid" />
+                  <div class="card hoverlight shadow">
+                     <img src="./images/cafe.jpg" alt="Technology" class="img-fluid bradius" />
                      <div class="card-body">
                         <h5 class="card-title">
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi fugit repudiandae eaque consequuntur sed id veniam? Iste officiis, odio amet quia, unde
@@ -82,12 +82,14 @@
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi debitis incidunt, recusandae beatae velit nobis maxime ea, aut numquam voluptatum quasi?
                            Nam incidunt tempora qui, voluptatibus perspiciatis corrupti eos impedit.
                         </p>
-                        <a data-bs-toggle="modal" data-bs-target="#modal-1" class="btn btn-primary">Ver Produto</a>
+                        <div class="text-center">
+                           <a data-bs-toggle="modal" data-bs-target="#modal-1" class="btn btn-primary">Ver Produto</a>
+                        </div> 
                      </div>
                   </div>
 
-                  <div class="card">
-                     <img src="./images/tech.jpg" alt="Technology" class="img-fluid" />
+                  <div class="card hoverlight shadow bradius">
+                     <img src="./images/cafe.jpg" alt="Technology" class="img-fluid bradius" />
                      <div class="card-body">
                         <h5 class="card-title">
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi fugit repudiandae eaque consequuntur sed id veniam? Iste officiis, odio amet quia, unde
@@ -97,12 +99,14 @@
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi debitis incidunt, recusandae beatae velit nobis maxime ea, aut numquam voluptatum quasi?
                            Nam incidunt tempora qui, voluptatibus perspiciatis corrupti eos impedit.
                         </p>
-                        <a href="#produto-2" class="btn btn-primary">Ver Produto</a>
+                        <div class="text-center">
+                           <a data-bs-toggle="modal" data-bs-target="#modal-2" href="#produto-2" class="btn btn-primary">Ver Produto</a>
+                        </div>
                      </div>
                   </div>
 
-                  <div class="card">
-                     <img src="./images/tech.jpg" alt="Technology" class="img-fluid" />
+                  <div class="card hoverlight shadow bradius">
+                     <img src="./images/cafe.jpg" alt="Technology" class="img-fluid bradius" />
                      <div class="card-body">
                         <h5 class="card-title">
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi fugit repudiandae eaque consequuntur sed id veniam? Iste officiis, odio amet quia, unde
@@ -112,7 +116,9 @@
                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi debitis incidunt, recusandae beatae velit nobis maxime ea, aut numquam voluptatum quasi?
                            Nam incidunt tempora qui, voluptatibus perspiciatis corrupti eos impedit.
                         </p>
-                        <a href="#produto-3" class="btn btn-primary">Ver Produto</a>
+                        <div class="text-center">
+                           <a href="#produto-3" class="btn btn-primary" data-bs-target="#modal-3" data-bs-toggle="modal">Ver Produto</a>
+                        </div>
                      </div>
                   </div>
 
@@ -124,12 +130,30 @@
       <section id="contato">
          <div class="container">
             <div class="row">
-               <div class="col">
-                  <h2>Contato</h2>
-                  <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação</p>
+               <div class="col-md-12 text-center">
+                  <h1>Ficou interessado?</h1>
                </div>
-               <div class="col-md-6 col-sm-12">
+               <div class="col-md-6 col-sm-12 m-auto">
+                     <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-success" data-bs-toggle="modal" data-bs-target="#modal-form">
+                           Entre em Contato
+                        </button>
+                     </div>
+               </div>
+            </div>
+         </div>
+      </section>
 
+      <div class="modal fade" id="modal-form">
+         <div class="modal-dialog">
+            <div class="modal-content">
+
+               <div class="modal-header text-center">
+                  <h6 class="modal-title text-center">Contato</h6>
+                  <button class="btn"></button>
+               </div>
+
+               <div class="modal-body">
                   <form class="form">
                      <div class="input-group">
                         <input class="form-control" type="text" name="name" placeholder="Digite seu nome">
@@ -141,16 +165,19 @@
                      <div class="input-group">
                         <textarea class="form-control" rows="5" placeholder="Mensagem"></textarea>
                      </div>
-
-                     <button type="submit" class="btn btn-lg btn-success">
-                        Solicitar Cotação
-                     </button>
+                     <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-success">
+                           Enviar
+                        </button>
+                     </div>
                   </form>
-
+               </div>
+               <div class="modal-footer">
+                  <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                </div>
             </div>
          </div>
-      </section>
+      </div>
 
 
 
@@ -190,14 +217,121 @@
                      </tbody>
                   </table>
                </div>
-
                <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
                </div>
-
             </div>
          </div>
       </div>
+
+            <div class="modal fade" id="modal-2">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+
+                     <div class="modal-header">
+                        <h5 class="modal-title">Produto 2</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
+                     </div>
+
+                     <div class="modal-body">
+                        <h6>Confira os tamanhos e preços</h6>
+                     <table class="table table-hover table-striped">
+                        <thead>
+                           <tr>
+                              <th>Tamanho</th>
+                              <th>Valor</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>P</td>
+                              <td>R$ 150</td>
+                           </tr>
+                           <tr>
+                              <td>M</td>
+                              <td>R$ 250</td>
+                           </tr>
+                           <tr>
+                              <td>G</td>
+                              <td>R$ 350</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="modal fade" id="modal-3">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title">Produto 3</h5>
+                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <h6>Confira os tamanhos e preços</h6>
+                     <table class="table table-hover table-striped">
+                        <thead>
+                           <tr>
+                              <th>Tamanho</th>
+                              <th>Valor</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>P</td>
+                              <td>R$ 200</td>
+                           </tr>
+                           <tr>
+                              <td>M</td>
+                              <td>R$ 300</td>
+                           </tr>
+                           <tr>
+                              <td>G</td>
+                              <td>R$ 400</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="modal-footer">
+                     <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+<div class="cardpedro">
+<div class="modal fade" id="modal-me">
+   <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">  
+         <div class="cardp">
+         <div class="cardpi">
+            <img src="./images/img.jpg" alt="">
+         </div>
+         <p>Pedro</p>
+         <p>Full Stack Developer</p>
+         <div class="button">
+            <a href="https://github.com/ThanksUniverse" target="_blank">
+               <button>Github</button>
+            </a>
+         </div>  
+         <div class="button2">
+            <a href="https://twitter.com/ThanksUniverse_" target="_blank">
+               <button>Twitter</button>
+            </a>
+         </div>  
+
+      </div>
+   </div>
+</div>
+</div>
+           
+        
+       
 
 
 <!--TODO: Change pictures from products -->
