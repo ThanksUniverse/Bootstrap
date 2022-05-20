@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Módulo 15</title>
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <link rel="stylesheet" href="./css/custom.css">
+      <link rel="stylesheet" href="./css/custom-form.css">
+   </head>
+   <body>
+      <header> <!---Bootstrap m-auto(center)-->
+         <nav class="navbar col-md-10 navbar-expand-lg bg-light m-auto">
+            <div class="container-fluid">
+              <img src="./images/logo.png" alt="Logo" class="img-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./index.html#sobre">Sobre</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./index.html#produtos">Produtos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="./index.html#contato">Contato</a></li>
+                     </ul>
+                     <li class="nav-item">
+                       <button class="nav-link active btn border-0" data-bs-target="#modal-me" data-bs-toggle="modal">Sobre mim</button>
+                     </li>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+      </header>
+
+      <section id="contato">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 text-center">
+                  <h2>Cadastro</h2>
+                  <p>Faça seu cadastro para receber mais informações</p>
+               </div>
+            </div>
+            <form class="form">
+
+               <div class="form-row">
+                  <div class="col">
+                     <div class="input-group">
+                        <input class="form-control" type="text" name="name" placeholder="Digite seu nome">
+                     </div>
+                  </div>
+
+                  <div class="col">
+                     <div class="input-group">
+                        <input class="form-control" type="email" name="email" placeholder="Digite seu email">
+                     </div>
+                  </div>
+               </div>
+
+               <!--Endereço-->
+
+               <div class="row">
+                  <div class="col">
+                     <label for="endereco">Endereço Completo</label>
+                     <input type="text" class="form-control" id="endereco" placeholder="Endereço Completo">
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col">
+                     <label for="cidade">Cidade</label>
+                     <input type="text" class="form-control" placeholder="" name="Cidade" id="cidade">
+                  </div>
+                  <div class="col">
+                     <label for="estado">Estado</label>
+                     <select name="estado" id="estado" class="form-control">
+                        <option value="">Selecione um estado</option>
+                        <option value="SP">SP</option>
+                        <option value="AL">AL</option>
+                        <option value="MG">MG</option>
+                     </select>
+                  </div>
+                  <div class="col">
+                     <label for="cep">CEP</label>
+                     <input type="text" name="cep" id="cep" class="form-control"> <!--Adicionar FORM Control é muito importante--> <!--name é utilizado para o backend e id para o front end-->
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col">
+                     <div class="input-group">
+                        <label for="info" class="col-form-label col-md-12">Informações</label>
+                        <textarea class="form-control" id="info" rows="5" placeholder="Mensagem"></textarea>
+                   </div>    
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col">
+                     <div class="form-check">
+                        <label for="condicoes" class="form-check-label">Aceito os termos de condições</label>
+                        <input type="checkbox" name="condicoes" id="condicoes">
+                        <label for="promocionais" class="form-check-label">Aceito receber mensagens promocionais</label>
+                        <input type="checkbox" name="promocionais" id="promocionais">
+                     </div>
+                  </div>
+               </div>
+
+              
+               <div class="text-center">
+                  <button type="submit" class="btn btn-lg btn-success">
+                     Realizar Cadastro
+                  </button>
+               </div>
+            </form>
+
+            <p><a href="#cadastro" data-bs-toggle="modal" data-bs-target="#modal-1">Cadastre-se</a> para receber novidades</p>
+
+         <div> <!--end container-->
+      </section>
+
+      <div class="modal fade" id="modal-1">
+         <div class="modal-dialog">
+            <div class="modal-content">
+
+               <div class="modal-header">
+                  <h5 class="modal-title">Increver-se na lista</h5>
+                  <button class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
+               </div>
+               
+               <div class="modal-body">
+                  <h6>Preencha os campos para receber novidades e promoções</h6>
+                 <form class="form-inline">
+                    <div class="row">
+                       <div class="form-group col-4">
+                          <input type="text" class="form-control mb-2" name="nome" placeholder="Nome"> <!--form-control-sm--> <!--diminui os campos-->
+                       </div>
+                       <div class="form-group col-4">
+                          <input type="text" class="form-control mb-2" name="nome" placeholder="Email" required>
+                       </div>
+                       <div class="form-group col-4">
+                          <button type="submit" class="btn btn-success">Receber novidades</button>
+                       </div>
+                    </div>
+                 </form>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary mb-2 col-4" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+            <div class="modal fade" id="modal-2">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+
+                     <div class="modal-header">
+                        <h5 class="modal-title">Produto 2</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" arial-label="Close"></button>
+                     </div>
+
+                     <div class="modal-body">
+                        <h6>Confira os tamanhos e preços</h6>
+                     <table class="table table-hover table-striped">
+                        <thead>
+                           <tr>
+                              <th>Tamanho</th>
+                              <th>Valor</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>P</td>
+                              <td>R$ 150</td>
+                           </tr>
+                           <tr>
+                              <td>M</td>
+                              <td>R$ 250</td>
+                           </tr>
+                           <tr>
+                              <td>G</td>
+                              <td>R$ 350</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="modal fade" id="modal-3">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title">Produto 3</h5>
+                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <h6>Confira os tamanhos e preços</h6>
+                     <table class="table table-hover table-striped">
+                        <thead>
+                           <tr>
+                              <th>Tamanho</th>
+                              <th>Valor</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>P</td>
+                              <td>R$ 200</td>
+                           </tr>
+                           <tr>
+                              <td>M</td>
+                              <td>R$ 300</td>
+                           </tr>
+                           <tr>
+                              <td>G</td>
+                              <td>R$ 400</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="modal-footer">
+                     <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+<div class="cardpedro">
+<div class="modal fade" id="modal-me">
+   <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">  
+         <div class="cardp">
+         <div class="cardpi">
+            <img src="./images/img.jpg" alt="">
+         </div>
+         <p>Pedro</p>
+         <p>Full Stack Developer</p>
+         <div class="button">
+            <a href="https://github.com/ThanksUniverse" target="_blank">
+               <button>Github</button>
+            </a>
+         </div>  
+         <div class="button2">
+            <a href="https://twitter.com/ThanksUniverse_" target="_blank">
+               <button>Twitter</button>
+            </a>
+         </div>  
+
+      </div>
+   </div>
+</div>
+</div>
+           
+        
+       
+
+
+<!--TODO: Change pictures from products -->
+<!--TODO: End modals for products-->
+<!--TODO: Put form inside a modal-->
+<!--TODO: Choose P-T Colors-->
+<!--TODO: -->
+
+
+
+
+
+      <script src="./js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
