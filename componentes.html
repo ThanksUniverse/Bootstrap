@@ -5,7 +5,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Módulo 15</title>
-      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="./libs/fontawesome/css/fontawesome.min.css">
       <link rel="stylesheet" href="./css/custom.css">
       <link rel="stylesheet" href="./css/custom-form.css">
    </head>
@@ -92,6 +93,10 @@
    <a name="" id="" class="btn btn-dark float-end" href="#" role="button">Botão</a>
 </div>
 
+<i class="fa-solid fa-heart"></i>
+<i class="fa-brands fa-github link-dark fa-4x"></i>
+<i class="fa-brands fa-twitter link-primary fa-3x"></i>
+
 
 
 
@@ -103,7 +108,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button alert-danger alert" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Adicionar coisas
+                  <i class="fa-solid fa-heart fa-2x link-danger"></i>
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -141,7 +146,7 @@
       </div>
 
 
-      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script>
          const myCarouselElement = document.querySelector('#carouselExampleFade')
          const carousel = new bootstrap.Carousel(myCarouselElement, {
@@ -150,5 +155,7 @@
          pause: true
          })
       </script>
+      <!-- <script src="https://kit.fontawesome.com/25581d9f11.js" crossorigin="anonymous"></script> -->
+      <script src="./libs/fontawesome/js/all.min.js"></script>
    </body>
 </html>
