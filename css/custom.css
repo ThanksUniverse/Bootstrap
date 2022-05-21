@@ -142,7 +142,22 @@ div.button2 {
 }
 
 .hovercustom:hover {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(88, 105, 97, 0.5);
+}
+
+.hoverbutton {
+	box-shadow: 0px 0px 5px #333;
+}
+
+.border-gray {
+	border-color: gray;
+}
+
+.hoverbutton:hover {
+	filter: brightness(120%);
+	transform: translateY(-5px);
+	transition: 0.5s;
+	cursor: pointer;
 }
 
 @media (max-width: 990px) {

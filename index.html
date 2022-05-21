@@ -11,11 +11,11 @@
    <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
 </head>
 
-<body>
+<body style="transition: .5s;">
 
    <!--Nav Header Done-->
    <header>
-      <nav class="navbar col-md-12 navbar-expand-lg bg-light m-auto">
+      <nav class="navbar col-md-12 navbar-expand-lg bg-light m-auto" id="navhead" style="transition: .5s;">
          <div class="container-fluid rounded-pill">
             <a href="#" data-bs-toggle="modal" data-bs-target="#modal-me"><img src="./images/img.jpg" alt="Logo"
                   class="img-fluid rounded-circle"></a>
@@ -27,32 +27,27 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item text-light">
-                     <a class="nav-link active border-dark border-bottom me-1 link-dark hovercustom rounded-3"
+                     <a class="nav-link active border-dark border-bottom me-1 link-dark hovercustom rounded-3" id="nav1"
                         aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link active border-dark border-bottom me-1 link-dark hovercustom rounded-3"
+                     <a class="nav-link active border-dark border-bottom me-1 link-dark hovercustom rounded-3" id="nav2"
                         href="#sobre">Sobre</a>
                   </li>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle border-dark border-bottom me-1 link-dark hovercustom rounded-3"
-                        href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                     </a>
-                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#produtos">Produtos</a></li>
-                        <li>
-                           <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#contato">Contato</a></li>
-                     </ul>
+                  <li class="nav-item">
+                     <a class="nav-link active border-dark border-bottom me-1 link-dark hovercustom rounded-3" id="nav3"
+                        href="#contato">Contato</a>
+                  </li>
                   <li class="nav-item">
                      <button
                         class="nav-link active border-dark border-bottom me-1 link-dark hovercustom rounded-3 btn border-0"
-                        data-bs-target="#modal-me" data-bs-toggle="modal">Sobre mim</button>
+                        id="nav4" data-bs-target="#modal-me" data-bs-toggle="modal">Sobre mim</button>
                   </li>
-                  </li>
+                  <!--<i class="fa-solid fa-sun-bright"></i>-->
                </ul>
+
+               <i class="fa-solid fa-moon fa-2x bg-secondary rounded-circle p-1 hoverbutton" id="moon"
+                  onclick="darkMode()"></i>
             </div>
          </div>
       </nav>
@@ -115,9 +110,9 @@
    <!--Feature: Accordion-->
    <div class="container">
       <div class="accordion" id="accordionExample">
-         <div class="accordion-item">
+         <div class="accordion-item" id="ahead">
             <h2 class="accordion-header" id="headingOne">
-               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+               <button class="accordion-button collapsed" type="button" id="aheadb" data-bs-toggle="collapse"
                   data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   Habilidades:
                   <i class="fa-brands fa-html5 fa-2x" style="color: var(--orange);"></i>
@@ -176,12 +171,11 @@
          <div class="modal-content">
 
             <div class="modal-header text-center">
-               <h6 class="modal-title text-center">Contato</h6>
-               <button class="btn"></button>
+               <h6 class="modal-title text-center link-dark">Contato</h6>
+               <button class="btn-close btn-danger bg-danger" data-bs-dismiss="modal" arial-label="Close"></button>
             </div>
-
             <div class="modal-body">
-               <form class="form">
+               <form class="form text-black">
 
                   <div class="row">
                      <div class="col-8">
@@ -232,7 +226,7 @@
                      </div>
                      <div class="col">
                         <label for="cep">CEP</label>
-                        <input type="text" name="cep" id="cep" class="form-control" required>
+                        <input type="text" name="cep" id="cep" class="form-control" placeholder="CEP" required>
                         <!--Adicionar FORM Control é muito importante-->
                         <!--name é utilizado para o backend e id para o front end-->
                      </div>
@@ -268,7 +262,7 @@
                </form>
             </div>
             <div class="modal-footer">
-               <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+               <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
             </div>
          </div>
       </div>
